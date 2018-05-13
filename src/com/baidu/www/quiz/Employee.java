@@ -1,0 +1,51 @@
+package com.baidu.www.quiz;
+
+public class Employee {
+	private long employeeNumber;
+	private String name;
+	private gender gen; //性别
+	private double pay; //工资
+	public long getEmployeeNumber() {
+		return employeeNumber;
+	}
+	public void setEmployeeNumber(long employeeNumber) {
+		this.employeeNumber = employeeNumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public gender getGender() {
+		return gen;
+	}
+	public void setGender(gender gen) {
+		this.gen = gen;
+	}
+	public double getPay() {
+		return pay;
+	}
+	public void setPay(double pay) {
+		this.pay = pay;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "姓名："+name+"工号："+employeeNumber+"性别："+gen.getGender()+"薪水："+pay;
+	}
+}
+
+enum gender{
+	male("男"),female("女");
+	private gender(String gen){
+		this.setGender(gen);
+	}
+	private String gen;
+	public void setGender(String gen){
+		this.gen = gen;
+	}
+	public String getGender(){
+		return gen;
+	}
+}
