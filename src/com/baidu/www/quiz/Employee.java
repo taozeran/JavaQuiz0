@@ -1,14 +1,27 @@
 package com.baidu.www.quiz;
 
 public class Employee {
-	private long employeeNumber;
+	private String employeeNumber;
 	private String name;
 	private gender gen; //性别
 	private double pay; //工资
-	public long getEmployeeNumber() {
+	/**
+	 * @param employeeNum
+	 * @param name2
+	 * @param gen2
+	 * @param pay2
+	 */
+	
+	public String getEmployeeNumber() {
 		return employeeNumber;
 	}
-	public void setEmployeeNumber(long employeeNumber) {
+	public Employee(String employeeNumber, String name, gender gen, double pay) {
+		this.employeeNumber = employeeNumber;
+		this.name = name;
+		this.gen = gen;
+		this.pay = pay;
+	}
+	public void setEmployeeNumber(String employeeNumber) {
 		this.employeeNumber = employeeNumber;
 	}
 	public String getName() {
